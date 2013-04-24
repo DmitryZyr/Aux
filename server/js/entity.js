@@ -45,6 +45,9 @@ var Entity = module.exports = cls.Class.extend({
 				actions[id] = timeoutId;
 		}
 	},
+	onCollision: function () {
+		return true;
+	},
 	getBaseState: function () {
 		return {
 			id: this.id,
