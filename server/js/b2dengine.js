@@ -16,21 +16,13 @@ var Engine = module.exports = cls.Class.extend({
 	init: function (debug) {
 		this.b2w = new b2World(new b2Vec2(0, 0), false);
 		this.debug = debug;
-	},
-	tick: function (fps) {
-		this.b2w.Step(1 / fps, 10, 10);
-		this.b2w.ClearForces();
 		var listener = new b2listener();
 		listener.PreSolve = this.preSolve;
 		this.b2w.SetContactListener(listener);
 	},
-	addBullet: function (bullet) {
-		var self = this;
-		this.addEntity(bullet);
-
-		bullet.onRemove = function (bullet) {
-			self.b2w.DestroyBody(bullet.body);
-		};
+	tick: function (fps) {
+		this.b2w.Step(1 / fps, 10, 10);
+		this.b2w.ClearForces();
 	},
 	preSolve: function (contact) {
 		var obj1 = contact.GetFixtureA().GetBody().GetUserData(),
