@@ -99,8 +99,8 @@ function (Player, Client, EntityFactory, Map, View, DebugEntity) {
 			});
 		},
 		moveCursor: function () {
-			var angle = 0;
-			return this.client.sendAngle(angle);
+			//var angle = 0;
+			//return this.client.sendAngle(angle);
 		},
 		shoot: function () {
 			this.client.sendShoot();
