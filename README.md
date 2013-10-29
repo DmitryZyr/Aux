@@ -14,10 +14,11 @@ Demo server located in [Russia](http://aux-ekb.air-labs.ru/) (may be down from t
 Building and running
 --------------
 
-* ```git clone https://github.com/floatdrop/Aux && cd Aux```
+* ```git clone https://github.com/DmitryZyr/Aux.git && cd Aux```
 * ```npm install -d```
 * ```grunt```
 * ```node app.js```
+* ```localhost:8001```
 
 
 License
